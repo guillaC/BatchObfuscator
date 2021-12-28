@@ -62,14 +62,14 @@
             // 
             this.TSMIRandomVarSub.Name = "TSMIRandomVarSub";
             this.TSMIRandomVarSub.Size = new System.Drawing.Size(273, 22);
-            this.TSMIRandomVarSub.Text = "Randomize variable and subroutine names";
+            this.TSMIRandomVarSub.Text = "Randomize variables and subroutines names";
             this.TSMIRandomVarSub.Click += new System.EventHandler(this.TSMIRandomVar_Click);
             // 
             // TSMISubstringEncode
             // 
             this.TSMISubstringEncode.Name = "TSMISubstringEncode";
             this.TSMISubstringEncode.Size = new System.Drawing.Size(273, 22);
-            this.TSMISubstringEncode.Text = "Encode substrings by custom variables";
+            this.TSMISubstringEncode.Text = "Custom substrings encoding";
             this.TSMISubstringEncode.Click += new System.EventHandler(this.TSMISubstringEncode_Click);
             // 
             // TSMIFlowObf
@@ -115,7 +115,7 @@
             this.FCTBBatchCode.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("FCTBBatchCode.ServiceColors")));
             this.FCTBBatchCode.Size = new System.Drawing.Size(637, 369);
             this.FCTBBatchCode.TabIndex = 1;
-            this.FCTBBatchCode.Text = "REM Batch Code Obfuscator";
+            this.FCTBBatchCode.Text = "REM Batch Code Obfuscator github.com/guillaC";
             this.FCTBBatchCode.Zoom = 100;
             this.FCTBBatchCode.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.FCTBBatchCode_TextChanged);
             this.FCTBBatchCode.Pasting += new System.EventHandler<FastColoredTextBoxNS.TextChangingEventArgs>(this.FCTBBatchCode_Pasting);
