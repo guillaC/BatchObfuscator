@@ -136,6 +136,7 @@ namespace BatchProtect
             string setStr = "SET " + varName + "=" + new string(letters) + Environment.NewLine;
             string result = "";
             int i = 0;
+            int j = 0;
             foreach (string line in splittedCode)
             {
                 i++;
@@ -148,6 +149,7 @@ namespace BatchProtect
                     string[] splittedLine = line.Split(' ');
                     foreach (string word in splittedLine)
                     {
+                        j++;
                         char[] characters = word.ToCharArray();
                         if (word.Contains('%'))
                         {
@@ -167,7 +169,7 @@ namespace BatchProtect
                                     result += character;
                                 }
                             }
-                            result += " ";
+                            if (splittedLine.Count() != j) result += " ";
                         }
                     }
                 }
