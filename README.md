@@ -1,5 +1,10 @@
 # BatchObfuscator
 Simple obfuscator for batch scripts
+
+> **⚠ The project is currently on hold.**
+
+I take no responsibility for how this program is used. My hope is that others see it as a good tool to use and perhaps add more stuff to it.
+
 ## Features
 ### Randomize variables and subroutines names
 ![](https://github.com/guillaC/BatchObfuscator/blob/main/Randomize%20variable%20and%20subroutine%20names.png?raw=true)
