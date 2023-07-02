@@ -1,5 +1,7 @@
 # BatchObfuscator
-Simple obfuscator for batch scripts
+BatchObfuscator is a tool designed to assist software developers in making their Windows batch scripts difficult to modify and understand. By utilizing obfuscation techniques, BatchObfuscator protects the source code of a batch script by concealing sensitive information and making the process of reverse engineering more complex.
+
+During the obfuscation of a script, you have the option to choose from various obfuscation methods provided. These methods can be used individually or in combination, depending on your specific needs. You can also apply them successively to further enhance the protection of your script. This gives you precise control over the level of protection you want to apply to each section of your code.
 
 > **⚠ The project is currently on hold.**
 
