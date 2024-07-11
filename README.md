@@ -6,6 +6,11 @@ During the obfuscation of a script, you have the option to choose from various o
 > **⚠ The project is currently on hold.**
 
 I take no responsibility for how this program is used. My hope is that others see it as a good tool to use and perhaps add more stuff to it.
+## Usage
+- Paste your batch code into the input box.
+- Select the part of the code (or all the code).
+- Right-click to access the obfuscation features.
+- You can obfuscate all or parts of the code, using different obfuscation methods if desired.
 
 ## Features
 ### Randomize variables and subroutines names
