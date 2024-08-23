@@ -28,110 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.TSMIRemoveCommentary = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMIRandomVarSub = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMISubstringEncode = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMIFlowObf = new System.Windows.Forms.ToolStripMenuItem();
-            this.FCTBBatchCode = new FastColoredTextBoxNS.FastColoredTextBox();
-            this.contextMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FCTBBatchCode)).BeginInit();
-            this.SuspendLayout();
+            contextMenu = new ContextMenuStrip(components);
+            TSMIRemoveCommentary = new ToolStripMenuItem();
+            TSMIRandomVarSub = new ToolStripMenuItem();
+            TSMISubstringEncode = new ToolStripMenuItem();
+            TSMIFlowObf = new ToolStripMenuItem();
+            TSMIEncapsulateInTempFiles = new ToolStripMenuItem();
+            FCTBBatchCode = new FastColoredTextBoxNS.FastColoredTextBox();
+            contextMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)FCTBBatchCode).BeginInit();
+            SuspendLayout();
             // 
             // contextMenu
             // 
-            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMIRemoveCommentary,
-            this.TSMIRandomVarSub,
-            this.TSMISubstringEncode,
-            this.TSMIFlowObf});
-            this.contextMenu.Name = "contextMenuStrip1";
-            this.contextMenu.ShowImageMargin = false;
-            this.contextMenu.Size = new System.Drawing.Size(274, 92);
+            contextMenu.Items.AddRange(new ToolStripItem[] { TSMIRemoveCommentary, TSMIRandomVarSub, TSMISubstringEncode, TSMIEncapsulateInTempFiles, TSMIFlowObf });
+            contextMenu.Name = "contextMenuStrip1";
+            contextMenu.ShowImageMargin = false;
+            contextMenu.Size = new Size(274, 136);
             // 
             // TSMIRemoveCommentary
             // 
-            this.TSMIRemoveCommentary.Name = "TSMIRemoveCommentary";
-            this.TSMIRemoveCommentary.Size = new System.Drawing.Size(273, 22);
-            this.TSMIRemoveCommentary.Text = "Remove comments";
-            this.TSMIRemoveCommentary.Click += new System.EventHandler(this.TSMIRemoveCommentary_Click);
+            TSMIRemoveCommentary.Name = "TSMIRemoveCommentary";
+            TSMIRemoveCommentary.Size = new Size(273, 22);
+            TSMIRemoveCommentary.Text = "Remove comments";
+            TSMIRemoveCommentary.Click += TSMIRemoveCommentary_Click;
             // 
             // TSMIRandomVarSub
             // 
-            this.TSMIRandomVarSub.Name = "TSMIRandomVarSub";
-            this.TSMIRandomVarSub.Size = new System.Drawing.Size(273, 22);
-            this.TSMIRandomVarSub.Text = "Randomize variable and subroutine names";
-            this.TSMIRandomVarSub.Click += new System.EventHandler(this.TSMIRandomVar_Click);
+            TSMIRandomVarSub.Name = "TSMIRandomVarSub";
+            TSMIRandomVarSub.Size = new Size(273, 22);
+            TSMIRandomVarSub.Text = "Randomize variable and subroutine names";
+            TSMIRandomVarSub.Click += TSMIRandomVar_Click;
             // 
             // TSMISubstringEncode
             // 
-            this.TSMISubstringEncode.Name = "TSMISubstringEncode";
-            this.TSMISubstringEncode.Size = new System.Drawing.Size(273, 22);
-            this.TSMISubstringEncode.Text = "Encode substrings by custom variables";
-            this.TSMISubstringEncode.Click += new System.EventHandler(this.TSMISubstringEncode_Click);
+            TSMISubstringEncode.Name = "TSMISubstringEncode";
+            TSMISubstringEncode.Size = new Size(273, 22);
+            TSMISubstringEncode.Text = "Encode substrings by custom variables";
+            TSMISubstringEncode.Click += TSMISubstringEncode_Click;
             // 
             // TSMIFlowObf
             // 
-            this.TSMIFlowObf.Name = "TSMIFlowObf";
-            this.TSMIFlowObf.Size = new System.Drawing.Size(273, 22);
-            this.TSMIFlowObf.Text = "Obfuscate flow";
-            this.TSMIFlowObf.Click += new System.EventHandler(this.TSMIFlowObf_Click);
+            TSMIFlowObf.Name = "TSMIFlowObf";
+            TSMIFlowObf.Size = new Size(273, 22);
+            TSMIFlowObf.Text = "Obfuscate flow";
+            TSMIFlowObf.Click += TSMIFlowObf_Click;
+            // 
+            // TSMIEncapsulateInTempFiles
+            // 
+            TSMIEncapsulateInTempFiles.Name = "TSMIEncapsulateInTempFiles";
+            TSMIEncapsulateInTempFiles.Size = new Size(273, 22);
+            TSMIEncapsulateInTempFiles.Text = "Encapsulate In Temp File";
+            TSMIEncapsulateInTempFiles.Click += TSMIEncapsulateInTempFile_Click;
             // 
             // FCTBBatchCode
             // 
-            this.FCTBBatchCode.AllowMacroRecording = false;
-            this.FCTBBatchCode.AutoCompleteBracketsList = new char[] {
-        '(',
-        ')',
-        '{',
-        '}',
-        '[',
-        ']',
-        '\"',
-        '\"',
-        '\'',
-        '\''};
-            this.FCTBBatchCode.AutoIndentCharsPatterns = "\r\n^\\s*\\$[\\w\\.\\[\\]\\\'\\\"]+\\s*(?<range>=)\\s*(?<range>[^;]+);\r\n";
-            this.FCTBBatchCode.AutoScrollMinSize = new System.Drawing.Size(227, 14);
-            this.FCTBBatchCode.BackBrush = null;
-            this.FCTBBatchCode.BracketsHighlightStrategy = FastColoredTextBoxNS.BracketsHighlightStrategy.Strategy2;
-            this.FCTBBatchCode.CharHeight = 14;
-            this.FCTBBatchCode.CharWidth = 8;
-            this.FCTBBatchCode.ContextMenuStrip = this.contextMenu;
-            this.FCTBBatchCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.FCTBBatchCode.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.FCTBBatchCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FCTBBatchCode.IsReplaceMode = false;
-            this.FCTBBatchCode.LeftBracket = '(';
-            this.FCTBBatchCode.LeftBracket2 = '{';
-            this.FCTBBatchCode.Location = new System.Drawing.Point(0, 0);
-            this.FCTBBatchCode.Name = "FCTBBatchCode";
-            this.FCTBBatchCode.Paddings = new System.Windows.Forms.Padding(0);
-            this.FCTBBatchCode.RightBracket = ')';
-            this.FCTBBatchCode.RightBracket2 = '}';
-            this.FCTBBatchCode.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.FCTBBatchCode.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("FCTBBatchCode.ServiceColors")));
-            this.FCTBBatchCode.Size = new System.Drawing.Size(637, 369);
-            this.FCTBBatchCode.TabIndex = 1;
-            this.FCTBBatchCode.Text = "REM Batch Code Obfuscator";
-            this.FCTBBatchCode.Zoom = 100;
-            this.FCTBBatchCode.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.FCTBBatchCode_TextChanged);
-            this.FCTBBatchCode.Pasting += new System.EventHandler<FastColoredTextBoxNS.TextChangingEventArgs>(this.FCTBBatchCode_Pasting);
+            FCTBBatchCode.AllowMacroRecording = false;
+            FCTBBatchCode.AutoCompleteBracketsList = new char[]
+    {
+    '(',
+    ')',
+    '{',
+    '}',
+    '[',
+    ']',
+    '"',
+    '"',
+    '\'',
+    '\''
+    };
+            FCTBBatchCode.AutoIndentCharsPatterns = "\r\n^\\s*\\$[\\w\\.\\[\\]\\'\\\"]+\\s*(?<range>=)\\s*(?<range>[^;]+);\r\n";
+            FCTBBatchCode.AutoScrollMinSize = new Size(227, 14);
+            FCTBBatchCode.BackBrush = null;
+            FCTBBatchCode.BracketsHighlightStrategy = FastColoredTextBoxNS.BracketsHighlightStrategy.Strategy2;
+            FCTBBatchCode.CharHeight = 14;
+            FCTBBatchCode.CharWidth = 8;
+            FCTBBatchCode.ContextMenuStrip = contextMenu;
+            FCTBBatchCode.Cursor = Cursors.IBeam;
+            FCTBBatchCode.DisabledColor = Color.FromArgb(100, 180, 180, 180);
+            FCTBBatchCode.Dock = DockStyle.Fill;
+            FCTBBatchCode.IsReplaceMode = false;
+            FCTBBatchCode.LeftBracket = '(';
+            FCTBBatchCode.LeftBracket2 = '{';
+            FCTBBatchCode.Location = new Point(0, 0);
+            FCTBBatchCode.Name = "FCTBBatchCode";
+            FCTBBatchCode.Paddings = new Padding(0);
+            FCTBBatchCode.RightBracket = ')';
+            FCTBBatchCode.RightBracket2 = '}';
+            FCTBBatchCode.SelectionColor = Color.FromArgb(60, 0, 0, 255);
+            FCTBBatchCode.ServiceColors = (FastColoredTextBoxNS.ServiceColors)resources.GetObject("FCTBBatchCode.ServiceColors");
+            FCTBBatchCode.Size = new Size(637, 369);
+            FCTBBatchCode.TabIndex = 1;
+            FCTBBatchCode.Text = "REM Batch Code Obfuscator";
+            FCTBBatchCode.Zoom = 100;
+            FCTBBatchCode.TextChanged += FCTBBatchCode_TextChanged;
+            FCTBBatchCode.Pasting += FCTBBatchCode_Pasting;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 369);
-            this.Controls.Add(this.FCTBBatchCode);
-            this.Name = "Form1";
-            this.Text = "Batch Code Obfuscator";
-            this.contextMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FCTBBatchCode)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(637, 369);
+            Controls.Add(FCTBBatchCode);
+            Name = "Form1";
+            Text = "Batch Code Obfuscator";
+            contextMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)FCTBBatchCode).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -142,5 +147,6 @@
         private ToolStripMenuItem TSMIRandomVarSub;
         private ToolStripMenuItem TSMISubstringEncode;
         private ToolStripMenuItem TSMIFlowObf;
+        private ToolStripMenuItem TSMIEncapsulateInTempFiles;
     }
 }

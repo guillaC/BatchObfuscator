@@ -36,6 +36,11 @@ namespace BatchProtect
         {
             FCTBBatchCode.SelectedText = Obfuscator.ControlFlow(FCTBBatchCode.SelectedText);
         }
+        
+        private void TSMIEncapsulateInTempFile_Click(object sender, EventArgs e)
+        {
+            FCTBBatchCode.SelectedText = Obfuscator.EncapsulateInTempFile(FCTBBatchCode.SelectedText);
+        }
 
         private void FCTBBatchCode_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
         {

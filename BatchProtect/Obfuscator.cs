@@ -14,7 +14,7 @@ namespace BatchProtect
         public static string GetRandomString(int length = 10, bool special = true)
         {
             string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            if (special) chars = "阿贝色德饿艾豆贝尔维埃克斯爱耻";
+            if (special) chars = "קצקרשׁበአየጊግᏯᏰᎠᎢ阿贝色德饿艾豆贝尔维埃克斯爱耻";
             return new string(Enumerable.Repeat(chars, length).Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
@@ -205,6 +205,36 @@ namespace BatchProtect
 
             code = "GOTO l" + startNumber.ToString() + Environment.NewLine + code + ":l" + shuffledCode.Count;
             return RandomSubroutineName(code);
+        }
+
+        public static string EncapsulateInTempFile(string code)
+        {
+            string tempFileName = "%temp%\\" + GetRandomString(8, false) + ".bat";
+            List<string> lines = new List<string>();
+
+            foreach (var line in code.Split(new[] { "\r\n", "\n", "\r" }, StringSplitOptions.None))
+            {
+                string escapedLine = line
+                    .Replace("\\", "\\\\")
+                    .Replace("\"", "\\\"")
+                    .Replace("^", "^^")
+                    .Replace("&", "^&")
+                    .Replace("|", "^|")
+                    .Replace(">", "^>")
+                    .Replace("<", "^<")
+                    .Replace("!", "^^!");
+
+                lines.Add("echo " + escapedLine + " >> " + tempFileName);
+            }
+
+            string encapsulatedCode = "";
+
+            encapsulatedCode +=
+                string.Join(Environment.NewLine, lines) + Environment.NewLine +
+                "CALL " + tempFileName + Environment.NewLine +
+                "DEL " + tempFileName + Environment.NewLine;
+
+            return encapsulatedCode;
         }
     }
 }
