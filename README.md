@@ -19,6 +19,7 @@ I take no responsibility for how this program is used. My hope is that others se
 ![](https://github.com/guillaC/BatchObfuscator/blob/main/Encode%20substrings%20by%20custom%20variables.png?raw=true)
 ### Obfuscate Flow
 ![](https://github.com/guillaC/BatchObfuscator/blob/main/Obfuscate%20Flow.png?raw=true)
+### Encapsulate In Temp File
 ### Remove comments
 ## Example
 original : 
