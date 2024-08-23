@@ -85,46 +85,44 @@
             // 
             // FCTBBatchCode
             // 
-            FCTBBatchCode.AllowMacroRecording = false;
-            FCTBBatchCode.AutoCompleteBracketsList = new char[]
-    {
-    '(',
-    ')',
-    '{',
-    '}',
-    '[',
-    ']',
-    '"',
-    '"',
-    '\'',
-    '\''
-    };
-            FCTBBatchCode.AutoIndentCharsPatterns = "\r\n^\\s*\\$[\\w\\.\\[\\]\\'\\\"]+\\s*(?<range>=)\\s*(?<range>[^;]+);\r\n";
-            FCTBBatchCode.AutoScrollMinSize = new Size(227, 14);
-            FCTBBatchCode.BackBrush = null;
-            FCTBBatchCode.BracketsHighlightStrategy = FastColoredTextBoxNS.BracketsHighlightStrategy.Strategy2;
-            FCTBBatchCode.CharHeight = 14;
-            FCTBBatchCode.CharWidth = 8;
-            FCTBBatchCode.ContextMenuStrip = contextMenu;
-            FCTBBatchCode.Cursor = Cursors.IBeam;
-            FCTBBatchCode.DisabledColor = Color.FromArgb(100, 180, 180, 180);
-            FCTBBatchCode.Dock = DockStyle.Fill;
-            FCTBBatchCode.IsReplaceMode = false;
-            FCTBBatchCode.LeftBracket = '(';
-            FCTBBatchCode.LeftBracket2 = '{';
-            FCTBBatchCode.Location = new Point(0, 0);
-            FCTBBatchCode.Name = "FCTBBatchCode";
-            FCTBBatchCode.Paddings = new Padding(0);
-            FCTBBatchCode.RightBracket = ')';
-            FCTBBatchCode.RightBracket2 = '}';
-            FCTBBatchCode.SelectionColor = Color.FromArgb(60, 0, 0, 255);
-            FCTBBatchCode.ServiceColors = (FastColoredTextBoxNS.ServiceColors)resources.GetObject("FCTBBatchCode.ServiceColors");
-            FCTBBatchCode.Size = new Size(637, 369);
-            FCTBBatchCode.TabIndex = 1;
-            FCTBBatchCode.Text = "REM Batch Code Obfuscator";
-            FCTBBatchCode.Zoom = 100;
-            FCTBBatchCode.TextChanged += FCTBBatchCode_TextChanged;
-            FCTBBatchCode.Pasting += FCTBBatchCode_Pasting;
+            this.FCTBBatchCode.AllowMacroRecording = false;
+            this.FCTBBatchCode.AutoCompleteBracketsList = new char[] {
+        '(',
+        ')',
+        '{',
+        '}',
+        '[',
+        ']',
+        '\"',
+        '\"',
+        '\'',
+        '\''};
+            this.FCTBBatchCode.AutoIndentCharsPatterns = "\r\n^\\s*\\$[\\w\\.\\[\\]\\\'\\\"]+\\s*(?<range>=)\\s*(?<range>[^;]+);\r\n";
+            this.FCTBBatchCode.AutoScrollMinSize = new System.Drawing.Size(227, 14);
+            this.FCTBBatchCode.BackBrush = null;
+            this.FCTBBatchCode.BracketsHighlightStrategy = FastColoredTextBoxNS.BracketsHighlightStrategy.Strategy2;
+            this.FCTBBatchCode.CharHeight = 14;
+            this.FCTBBatchCode.CharWidth = 8;
+            this.FCTBBatchCode.ContextMenuStrip = this.contextMenu;
+            this.FCTBBatchCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.FCTBBatchCode.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.FCTBBatchCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FCTBBatchCode.IsReplaceMode = false;
+            this.FCTBBatchCode.LeftBracket = '(';
+            this.FCTBBatchCode.LeftBracket2 = '{';
+            this.FCTBBatchCode.Location = new System.Drawing.Point(0, 0);
+            this.FCTBBatchCode.Name = "FCTBBatchCode";
+            this.FCTBBatchCode.Paddings = new System.Windows.Forms.Padding(0);
+            this.FCTBBatchCode.RightBracket = ')';
+            this.FCTBBatchCode.RightBracket2 = '}';
+            this.FCTBBatchCode.SelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.FCTBBatchCode.ServiceColors = ((FastColoredTextBoxNS.ServiceColors)(resources.GetObject("FCTBBatchCode.ServiceColors")));
+            this.FCTBBatchCode.Size = new System.Drawing.Size(637, 369);
+            this.FCTBBatchCode.TabIndex = 1;
+            this.FCTBBatchCode.Text = "REM Batch Code Obfuscator github.com/guillaC";
+            this.FCTBBatchCode.Zoom = 100;
+            this.FCTBBatchCode.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.FCTBBatchCode_TextChanged);
+            this.FCTBBatchCode.Pasting += new System.EventHandler<FastColoredTextBoxNS.TextChangingEventArgs>(this.FCTBBatchCode_Pasting);
             // 
             // Form1
             // 
